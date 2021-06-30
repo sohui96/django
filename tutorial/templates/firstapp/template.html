@@ -1,0 +1,41 @@
+{% extends 'common/layout.html' %}
+
+{% block content %}
+<!-- <h3>문자 및 숫자</h3>
+<p>{{ str }} / {{ num }}</p>
+<hr>
+<h3>리스트</h3>
+<p>{{ list.0 }} / {{ list.1 }} / {{ list.2 }}</p>
+<hr>
+<h3>딕셔너리</h3>
+<p>{{ dict.a }} / {{ dict.b }}</p>
+<hr> -->
+
+{% if num >= 5 %} <p>PASS - {{ num }}</p>
+{% else %} <p>FAIL - {{ num }}</p>
+{% endif %}
+<ul>
+    {% for i in list %}
+    <li>{{ i }}</li>
+    {% endfor %}
+</ul>
+
+<table>
+    <tr>
+        <td>번호</td>
+        <td>과목명</td>
+    </tr>
+    {% for c in curri %}
+    <tr>
+        <td>{{ c.id }}</td>
+        <td>{{ c.name }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<form>
+    아 이 디 : <input type="text"><br>
+    비밀번호 : <input type="text">
+</form>
+
+{% endblock %}

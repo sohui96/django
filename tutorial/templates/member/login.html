@@ -1,0 +1,10 @@
+<form method="post">
+    {% csrf_token %}
+    아이디 : <input type="text" name="user_id"><br>
+    비밀번호 : <input type="text" name="user_pw"><br>
+    <input type="submit" value="로그인">
+</form>
+
+{% if request.session.user_id %}
+    <h4>{{ request.session.user_id }} 님 반갑습니다.</h4>
+{% endif %}

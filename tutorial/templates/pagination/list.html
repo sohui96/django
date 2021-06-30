@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<body style='margin:30px;'>
+    <table class='table table-striped'>
+        <tr>
+            <td>번호</td>
+            <td>내용</td>
+            <td>작성일시</td>
+        </tr>
+        {% for data in info %}
+        <tr>
+            <td>{{ data.id }}</td>
+            <td>{{ data.text }}</td>
+            <td>{{ data.cre_date | date:'Y-m-d H:i:s'}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div style='text-align:center;'>
+        <ul class='pagination'>
+            {% for i in pagination %}
+            <li>
+                <a href='/pagination/list/?page={{ i }}'>{{ i }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>

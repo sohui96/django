@@ -1,0 +1,32 @@
+#wrap {
+    width: 1000px;
+}
+
+.header {
+    width: 1000px; height: 100px; background: rgb(224, 221, 221);
+}
+
+.header h1 {
+    font-size:  40px;
+    text-align: center;
+}
+
+.nav {
+    width: 1000px; height: 100px; background: rgb(167, 162, 162);
+}
+
+.side {
+    float: right; width: 200px; height: 800px; background: rgb(121, 118, 118);
+}
+
+.contents {
+    float: left; width: 800px; height: 800px; background: #444;
+}
+
+.contents img {
+    float: left; width: 800px; height: 800px;
+}
+
+.footer {
+    clear: both; width: 1000px; height: 100px; background: rgb(231, 228, 228);
+}
